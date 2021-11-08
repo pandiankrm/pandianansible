@@ -3,3 +3,8 @@
   tasks:
   - name: test echo command
     command: echo "Hi"
+    register: disp
+  - name:  echo command
+    debug:
+      msg: "{{ disp }}"
+      
